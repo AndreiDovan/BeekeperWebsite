@@ -1,0 +1,358 @@
+/* Normalise */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default font for the entire project */
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Logo with jar */
+.logo-img{
+    display: none;
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.logo-img:active{
+    transform: rotate(45deg);
+}
+
+/* Navbar */
+.navbar{
+    background-color:#eed291;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    color: #dd972b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list{
+    list-style-type: none;
+    font-size: .9rem;
+    padding-right: 10px;
+}
+
+.nav-list li{
+    display: inline-block;
+    text-align:center;
+    padding-top: 14px;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    height: 46px;
+    
+    
+}
+
+/* Reset link default states and modify*/
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-list li:active{
+    color: black;
+}
+
+.nav-list a, a{
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Introductory section of the website */
+.intro{
+    background-image: url("background_albina.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;    /* In caz ca apare o liniuta alba sub poza pun 101vh */
+}
+
+#text-intro{
+    font-family: "Open Sans", sans-serif;
+    font-size: 4rem;
+}
+
+#name-wrap{
+    display: none;
+    position: relative;
+    margin: auto;
+    top: 5vh;
+    width: 200px;
+    text-align: center;
+    color: #d8d8d8;
+    border-bottom: 2px solid #d8d8d8;
+}
+
+#secondary-img{
+    display: none;
+}
+
+.sageata{
+    color: #dd972b;
+    position: relative;
+    top: 90vh;
+    left: 80vw;
+}
+
+/* Rules applied to all sections */
+.sect{
+    padding: 40px 50px 30px 50px;
+    text-align:center;
+    color:#31211c;
+    
+}
+
+.sect-title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: #dd972b;
+}
+
+/* Produse */
+
+.pret{
+    color: #e9bc1b;
+}
+
+
+.prod{
+    display: flex;
+    justify-content: space-around;
+}
+
+.prod-img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 20%;
+}
+
+.prod p{
+    font-size: 5vw;
+    padding-top: 1vw;
+    padding-left: 2vw;
+    justify-content: center;
+}
+
+#despre p, #beneficii p, #beneficii li{
+    text-align: left;
+}
+
+#benef-list{
+    list-style: none;
+}
+
+#benef-list li{
+    padding-bottom: 1rem;
+}
+
+#benef-list li::before{
+    color: #e9bc1b;
+    content: "\2022";
+    display: inline-block; 
+    font-weight: bold;
+    font-size: 1rem;
+    width: 1rem;
+    margin-left: -1em;
+}
+
+
+
+/* Contact */ 
+
+#contact a{
+    color:#dd972b;
+}
+
+#contact{
+    line-height: 2rem;
+}
+
+.contact-body{
+    text-align: left;   
+}
+
+.contact-list{
+    list-style-type: none;
+}
+
+/* Color the logos */
+.fb{
+    color: #3b5998;
+}
+
+.lkin{
+    color:#0e76a8;
+}
+
+.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Copyright */
+#copy{
+    text-align: center;
+    color: #897d6d;
+    font-size: .8rem;
+}
+
+/* MEDIA QUERIES */
+
+
+/* Breakpoint at 480px used for navbar optimisation*/
+@media screen and (min-width: 480px){
+    .nav-list li{
+        width: 18vw;
+    }
+
+    .nav-list li:last-child{
+        width: 22vw;
+    }
+
+    .sect-title{
+        font-size: 7vw;
+    }
+}
+
+/* Breakpoint at 768px - starting point for tablet portrait resolutions*/
+@media screen and (min-width: 768px), (orientation: landscape){
+
+    .nav-list li{
+        font-size: 1.2rem;
+        padding-top: 10px;
+    }
+    .intro{
+        background-image: url("background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
+
+    #secondary-img{
+        display: inline-block;
+        height: 250px;
+        position: absolute;
+        right: 20vw;
+        top: 38vh;
+        border-radius: 50%;
+        filter: brightness(80%);
+    }
+
+    #secondary-img:hover{
+        filter: brightness(100%);
+    }
+
+
+    .sect, #education{
+        padding-left: calc(100px + 5vw) !important;
+        padding-right: calc(100px + 5vw) !important;
+    }
+
+    .sect-title{
+        font-size: 4rem;
+    }
+
+    .prod-img{
+        height: calc(100px + 1vw);
+        width: calc(100px + 1vw);
+    }
+
+    .prod p{
+        padding-top: 2vw;
+        font-size: calc(1rem + 1vw);
+    }
+
+    .contact{
+        background-image: url("contact.jpeg");
+    }
+
+    .contact p, #copy{
+        color: #d8d8d8;
+    }
+}
+
+/* Breeakpoint at 1280px - starting point for desktop displays */
+@media screen and (min-width: 1280px){
+
+    .nav-list li:hover{
+        color: #b84e52;
+    }
+
+    .nav-list li:active{
+        color: black;
+    }
+
+    .logo-img:hover{
+        transform: rotate(45deg);
+    }
+
+    #name{
+        font-size: 6rem;
+    }
+
+    #name-intro{
+        font-size: 3rem;
+    }
+
+    #name-wrap{
+        width: 300px;
+        position: absolute;
+        top: 30vh;
+    }
+
+    #name-wrap:hover{
+        filter:brightness(200%);
+    }
+
+    #secondary-img{
+        height: 400px;
+        top: 30vh;
+    }
+
+    .sect, #education{
+        padding-left: 300px !important;
+        padding-right: 300px !important;
+    }
+
+    .contact{
+        background-image: url("contact.jpeg");
+    }
+
+    .contact p, #copy{
+        color: #d8d8d8;
+    }
+}
+
+/* Special condition for mobile devices in landscape mode */
+@media screen and (orientation: landscape) and (max-height: 450px)
+{
+    #name{
+        font-size: 4rem;
+    }
+
+    #name-intro{
+        font-size: 2rem;
+    }
+
+    #name-wrap{
+        width: 200px;
+        position: absolute;
+        top: 100px;
+    }
+
+    #secondary-img{
+        height: 230px;
+        top: 27vh;
+    }
+}
