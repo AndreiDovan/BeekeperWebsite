@@ -36,7 +36,7 @@ body{
 .nav-list{
     list-style-type: none;
     font-size: .9rem;
-    padding-right: 10px;
+    padding-right: 3vw;
 }
 
 .nav-list li{
@@ -46,8 +46,10 @@ body{
     padding-right: 1vw;
     padding-left: 1vw;
     height: 46px;
-    
-    
+}
+
+.nav-list li:last-child{
+    padding-right: 1vw;
 }
 
 /* Reset link default states and modify*/
@@ -67,16 +69,26 @@ a, a:hover, a:focus, a:active{
 
 /* Introductory section of the website */
 .intro{
-    background-image: url("background_albina.jpg");
+    background-image: url("background_camp2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;    /* In caz ca apare o liniuta alba sub poza pun 101vh */
+    height: 101vh; 
+    width: 101vw;   /* In caz ca apare o liniuta alba sub poza pun 101vh */
 }
 
 #text-intro{
     font-family: "Open Sans", sans-serif;
     font-size: 4rem;
+}
+
+.poze-intro{
+    display: none;
+}
+
+
+.poza-1{
+    display:inline-block;
 }
 
 #name-wrap{
@@ -86,8 +98,8 @@ a, a:hover, a:focus, a:active{
     top: 5vh;
     width: 200px;
     text-align: center;
-    color: #d8d8d8;
-    border-bottom: 2px solid #d8d8d8;
+    color: #c07c17;
+    border-bottom: 2px solid #c07c17;;
 }
 
 #secondary-img{
@@ -97,8 +109,14 @@ a, a:hover, a:focus, a:active{
 .sageata{
     color: #dd972b;
     position: relative;
-    top: 90vh;
-    left: 80vw;
+    left: calc(50vw - 32px);
+    top: calc(90vh - 32px);
+}
+
+
+
+.sageata-mare{
+    display: none !important;
 }
 
 /* Rules applied to all sections */
@@ -118,17 +136,18 @@ a, a:hover, a:focus, a:active{
 /* Produse */
 
 .pret{
+    font-size: 1.5 em;
     color: #e9bc1b;
 }
 
 
 .prod{
-    display: flex;
-    justify-content: space-around;
+    display: inline;
 }
 
 .prod-img{
-    width: 20vw;
+    margin-left: 7vw; 
+    float: left;
     height: 20vw;
     border-radius: 20%;
 }
@@ -139,6 +158,102 @@ a, a:hover, a:focus, a:active{
     padding-left: 2vw;
     justify-content: center;
 }
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev{
+      left: 0;
+  }
+  
+  .poza-slide{
+      border-radius: 5%;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 #despre p, #beneficii p, #beneficii li{
     text-align: left;
@@ -231,28 +346,72 @@ a, a:hover, a:focus, a:active{
         font-size: 1.2rem;
         padding-top: 10px;
     }
+
+    
     .intro{
-        background-image: url("background.jpeg");
+        background-image: url("background_camp2.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         height: 100vh;
     }
 
-    #secondary-img{
-        display: inline-block;
-        height: 250px;
+    #text-intro{
+        color: #dd972b;
+    }
+
+    #name-wrap{
         position: absolute;
-        right: 20vw;
-        top: 38vh;
+        width: 100%;
+        margin-left: auto;
+        border: none;
+        top: 10vh;
+    }
+
+    .poze-intro{
+        display: inline-block;
+        margin-top: calc(50vh - 100px);
+        width: 100%;
+        text-align: center;
+    }
+
+    .poza{
+        height: 30vw;
+        margin-right: 5vw;
+        border-radius: 40%;
+    }
+
+    .poza-desk{
+        display: none;
+    }
+
+    .poza-2{
+        margin-right: 0;
+    }
+
+    .poza:hover{
+        border-radius: 0;
+    }
+
+    .poza:last-child{
+        margin-right: 0;
+    }
+
+    .sageata-mare{
+        display: inline !important;
+        left: calc(50vw - 32px);
+        top: calc(90vh - 32px);
+    }
+/*
+    .white-wrap{
+        position: relative;
+        top: 90vh;
+        height: 64px;
+        width: 64px;
         border-radius: 50%;
-        filter: brightness(80%);
-    }
-
-    #secondary-img:hover{
-        filter: brightness(100%);
-    }
-
+        background-color: white;
+        left: calc(50vw - 32px);
+    }*/
 
     .sect, #education{
         padding-left: calc(100px + 5vw) !important;
@@ -273,11 +432,7 @@ a, a:hover, a:focus, a:active{
         font-size: calc(1rem + 1vw);
     }
 
-    .contact{
-        background-image: url("contact.jpeg");
-    }
-
-    .contact p, #copy{
+    #copy{
         color: #d8d8d8;
     }
 }
@@ -286,12 +441,11 @@ a, a:hover, a:focus, a:active{
 @media screen and (min-width: 1280px){
 
     .nav-list li:hover{
-        color: #b84e52;
-    }
-
-    .nav-list li:active{
         color: black;
     }
+
+
+
 
     .logo-img:hover{
         transform: rotate(45deg);
@@ -303,17 +457,28 @@ a, a:hover, a:focus, a:active{
 
     #name-intro{
         font-size: 3rem;
+    }  
+
+    
+    .poza-desk{
+        display:inline-block;
+    }
+    
+
+    .poze-intro{
+        margin-top: calc(40vh - 100px);
+        width: 100%;
+        text-align: center;
     }
 
-    #name-wrap{
-        width: 300px;
-        position: absolute;
-        top: 30vh;
+    .poza{
+        height: 20vw;
     }
 
-    #name-wrap:hover{
-        filter:brightness(200%);
+    .poza-2{
+        margin-right: 5vw;
     }
+ 
 
     #secondary-img{
         height: 400px;
@@ -346,6 +511,18 @@ a, a:hover, a:focus, a:active{
     }
 
     #name-wrap{
+        position: absolute !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        border: none !important;
+        top: 20vh !important;
+    }
+
+    .sageata{
+        top: calc(80vh - 32px);
+    }
+
+    #name-wrap{
         width: 200px;
         position: absolute;
         top: 100px;
@@ -354,5 +531,9 @@ a, a:hover, a:focus, a:active{
     #secondary-img{
         height: 230px;
         top: 27vh;
+    }
+
+    .poze-intro{
+        display: none;
     }
 }
